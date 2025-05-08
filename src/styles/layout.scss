@@ -1,0 +1,156 @@
+@use "_variables" as vt;
+
+section.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-top: solid 1px white;
+  border-bottom: solid 1px white;
+  margin: 0px 15px;
+  padding: 45px 0;
+  margin-bottom: 100px;
+  position: relative;
+
+  div :first-child {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  div :last-child {
+    font-size: 18px;
+    color: vt.$grey;
+  }
+  img {
+    position: absolute;
+    transform: scaleX(-1);
+    right: -14px;
+
+    bottom: -70px;
+    width: 204px;
+  }
+}
+
+section.projects {
+  margin: 0 20px;
+  margin-bottom: 100px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      padding-top: 10px;
+      a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 18px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -15px;
+          height: 2px;
+          width: 100%;
+          background-color: vt.$green;
+        }
+      }
+    }
+  }
+
+  div.articles {
+    display: flex;
+    flex-direction: column;
+    figure {
+      img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    h3 {
+      color: white;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    div.one {
+      justify-content: start;
+      gap: 30px;
+      margin-bottom: 20px;
+      p {
+        color: vt.$grey;
+        font-size: 20px;
+      }
+    }
+    div.two {
+      justify-content: start;
+      gap: 40px;
+      margin-bottom: 60px;
+      a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 18px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -15px;
+          height: 2px;
+          width: 100%;
+          background-color: vt.$green;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  section.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    text-align: start;
+    padding: 50px 25px;
+    border-bottom: 0;
+    margin-bottom: 0;
+
+    div :first-child {
+      font-size: 60px;
+    }
+    img {
+      bottom: -8px;
+    }
+  }
+  section.projects {
+    padding: 50px 25px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    div h2 {
+      font-size: 80px;
+    }
+    div p {
+      padding-top: 32px;
+    }
+
+    div.articles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+  }
+}

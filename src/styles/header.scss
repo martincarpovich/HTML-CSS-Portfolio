@@ -1,0 +1,266 @@
+@use "_variables" as vt;
+
+section.header-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  position: relative;
+  gap: 20px;
+  margin-bottom: 350px;
+  picture.decoration {
+    position: absolute;
+  }
+
+  figure.principal {
+    img {
+      width: 200px;
+      position: absolute;
+
+      right: 108px;
+      top: -10px;
+      z-index: 1;
+    }
+  }
+
+  p {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    font-family: vt.$primary-font;
+  }
+
+  div.icons {
+    display: flex;
+    gap: 30px;
+    z-index: 2;
+  }
+
+  img.aros {
+    position: absolute;
+    top: 51px;
+    left: -226px;
+
+    width: 200px;
+    z-index: -1;
+  }
+
+  img.oval {
+    position: absolute;
+    top: 203px;
+    right: -206px;
+
+    width: 76px;
+  }
+}
+
+section.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+  gap: 30px;
+  text-align: center;
+  margin-bottom: 100px;
+
+  h1 {
+    color: white;
+    font-size: 43px;
+    text-align: center;
+    .br {
+      display: none;
+    }
+    .subrayado {
+      display: inline-block;
+      position: relative;
+    }
+    .subrayado::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 6px;
+      width: 100%;
+      background-color: vt.$green;
+      z-index: -1;
+    }
+  }
+
+  p {
+    color: vt.$grey;
+    line-height: 1.5;
+
+    a {
+      text-decoration: none;
+      color: white;
+      position: relative;
+      letter-spacing: 2px;
+      font-weight: bold;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        height: 2px;
+        width: 100%;
+        background-color: vt.$green;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 30px 25px;
+  }
+  section.header-up {
+    padding-top: 0;
+    margin-bottom: 117px;
+    img.aros {
+      width: 352px;
+      top: 67px;
+      left: -25px;
+    }
+    p {
+      font-size: 40px;
+    }
+    div.icons {
+      gap: 40px;
+      img {
+        width: 30px;
+      }
+    }
+    figure.principal {
+      position: absolute;
+      img {
+        max-width: none;
+        width: 400px;
+        position: absolute;
+        top: -56px;
+        right: -984px;
+      }
+    }
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  section.description {
+    text-align: start;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 60px;
+
+    h1 {
+      font-size: 100px;
+      text-align: start;
+      z-index: 2;
+      margin-bottom: 50px;
+      line-height: 1;
+      .br {
+        display: none;
+      }
+      span {
+        display: block;
+      }
+    }
+    p {
+      font-size: 24px;
+      width: 400px;
+      margin-bottom: 30px;
+      a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        letter-spacing: 2px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -15px;
+          height: 2px;
+          width: 100%;
+          background-color: vt.$green;
+        }
+      }
+    }
+  }
+
+  section.header-up img.oval {
+    z-index: 10;
+    top: 533px;
+    right: -984px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 30px 150px;
+    margin-bottom: 300px;
+    section.header-up {
+      img.oval {
+        right: 200px;
+      }
+
+      figure.principal img {
+        width: 600px;
+        right: -1371px;
+        top: -120px;
+
+        picture {
+          position: absolute;
+        }
+      }
+
+      img.oval {
+        right: -845px;
+        top: 690px;
+        width: 150px;
+      }
+
+      img.aros {
+        width: auto;
+        left: -150px;
+        top: 100px;
+      }
+    }
+
+    section.description {
+      h1 {
+        font-size: 80px;
+
+        .br {
+          display: inline;
+        }
+        span {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  main {
+    margin-right: 150px;
+    margin-left: 150px;
+
+    section.skills {
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 50px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+      div :first-child {
+        font-size: 40px;
+      }
+
+      img {
+        width: auto;
+        right: -300px;
+        bottom: 80px;
+        overflow-x: hidden;
+      }
+    }
+  }
+}

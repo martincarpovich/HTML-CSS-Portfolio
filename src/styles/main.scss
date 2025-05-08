@@ -1,0 +1,16 @@
+@use "_variables" as vt;
+@use "header";
+@use "layout";
+@use "footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: vt.$primary-font;
+}
+
+body {
+  background-color: vt.$dark-black;
+  overflow-x: hidden;
+}
