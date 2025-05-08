@@ -4,7 +4,7 @@ Este es un proyecto de portafolio responsivo creado para mostrar mis habilidades
 
 ## Vista Previa
 
-![Captura de pantalla del proyecto](./img/portfolio-preview.png)
+![Captura de pantalla del proyecto](./portfolio-desktop.png)
 
 ## Tecnologías Usadas
 
